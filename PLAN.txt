@@ -1,0 +1,40 @@
+similar to that of the show countdown it will be a game where the user will be given a random jumble of letters and they must make the longest possible word
+
+firstly i will need to get the random assortment of letters
+this assortment must be 10 letters and have atlease 2 vowels in total
+the user must then be given a section for notes and a section for inputting their final answer
+
+if the timer finishes before the user has submitted a final answer then they lose. 
+
+if they submit an answer before the timer they get points equalling the length of the word they got. 
+
+if the word submitted is not a real word which we will have to check using a dictionary API
+
+the game will run for 5 rounds and in that time if they get 30 pints or more they are victorious
+
+
+USER STORIES
+
+i the user open the page there is a timer displaying 00:00 a button for rules and a button for starting and a field for the random letters set to 10 *'s
+there is a round number set to 0, a persistent high score and a currentScore for this runof 5 rounds. and finally a box for the user to input their word
+rulesBtn -> clicked -> modal window pop up - with rules 
+startBtn -> clicked -> generate random letters -> set time to 30 seconds and begin counting down - the user can then input a word that will be the answer and press enter or submit. 
+
+if the user submits after the time the answer is invalidated and the user gets 0 points for that round -> run reset function
+if the user submits before the timer the answer is locked in. it is then checked against dictionary API, if its a real word the length is added to the score then run the reset function
+
+reset function - roundNumber++ -> clear input -> reset timer and replace letters with *'s update currScore - if currScore is greater than highScore update that as well to be = currScore
+
+once the above is done the user will have a message to click start when ready to begin round 2. 
+
+repeat the above until roundNumber = 5. Then display a well done message with total score and highScore with an option to play again.
+
+if play again is clicked the program will start a new with only the highScore remaining unchanged. for this i should put the program into a singular function init 
+that can be called whenever the page is opened or when the user clicks play again
+
+notes - 
+
+random letters will be in a grid each letter will occupy its own cell 
+timer will be digital and count up 
+use a settimeout to display the users answer with its definition as a pop up between rounds
+
