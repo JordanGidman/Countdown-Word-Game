@@ -11,24 +11,25 @@ html {
 }
 
 body {
-  color: #fff;
+  /* color: #fff; */
+  color: #121213;
+  background-color: rgb(212, 212, 212);
 }
 
-.dark {
-  background-color: #121213;
+.container {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.4rem;
+  gap: 3.2rem;
   text-align: center;
 }
 
-.lightmode {
-  background-color: #fff;
-  color: #121213;
+.dark {
+  background-color: #121213;
+  color: #fff;
 }
 
 .header {
@@ -45,13 +46,69 @@ body {
   text-transform: uppercase;
 }
 
+.curr-score,
+.high-score {
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+
 .timer {
   font-size: 9.6rem;
-  letter-spacing: 1.2rem;
+  letter-spacing: 1rem;
+}
+
+.random-letters {
+  font-size: 4.4rem;
+  letter-spacing: 1.4rem;
+  text-transform: uppercase;
+}
+
+.input-label {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .input-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
+}
+
+.input-word {
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+  display: inline-block;
+  width: 40rem;
+}
+
+.btn-submit {
+  margin-bottom: 2rem;
+  width: 19rem;
+  background-color: #fff;
+}
+
+.btn {
+  padding: 1.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #121213;
+  color: #fff;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #121213;
+  cursor: pointer;
 }

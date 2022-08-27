@@ -12,34 +12,36 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <title>Count Up Game</title>
+    <title>Count down Game</title>
   </head>
   <body>
     <div class="container dark">
       <header class="header">
         <div class="page-title-container">
-          <h1 class="page-title"><span>Count Up Word Game</span></h1>
+          <h1 class="page-title"><span>Count Down Word Game</span></h1>
         </div>
       </header>
 
+      <div class="score-container">
+        <span class="curr-score">Score: 0</span>
+        <span class="high-score">Highscore: 0</span>
+      </div>
+
       <div class="timer-container">
         <h2 class="timer">00:00</h2>
+        <div class="random-letters">**********</div>
       </div>
 
       <div class="game-container">
-        <h2 class="game-description">
-          Please press start to begin your 30 seconds
-        </h2>
-        <div class="random-letters">**********</div>
-
         <form class="input-form">
-          <label for="input-word"
-            >Please Enter The longest Word You Can Make</label
+          <label for="input-word" class="input-label"
+            >Please Enter The longest Word You Can Think of</label
           >
-          <input tpye="textbox" class="input-word" id="input-word" />
+          <input readonly tpye="text" class="input-word" id="input-word" />
+          <button class="btn btn-submit">Submit</button>
         </form>
-        <button class="btn-start">start</button>
-        <button class="btn-rules">rules</button>
+        <button class="btn btn-start">start</button>
+        <button class="btn btn-rules">rules</button>
       </div>
     </div>
   </body>
