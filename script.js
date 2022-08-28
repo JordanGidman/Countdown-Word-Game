@@ -133,7 +133,7 @@ const nextRound = function (answer) {
   inputWord.value = ``;
   randomLettersEl.textContent = `**********`;
   inputWord.setAttribute(`readonly`, true);
-  inputLabel.textContent = `Please Enter The longest Word You Can Think of`;
+
   roundNum++;
   roundNumEl.textContent = `Round: ${roundNum}`;
 };
@@ -161,6 +161,7 @@ btnToggleColor.addEventListener(`click`, function () {
 btnStart.addEventListener(`click`, function () {
   //Allow the user to type
   inputWord.removeAttribute(`readonly`);
+  inputLabel.textContent = `Please Enter The longest Word You Can Think of`;
 
   currWord = generateWord().join(``);
 
