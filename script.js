@@ -204,13 +204,15 @@ const gameOver = function () {
   roundNumEl.textContent = `Round: ${roundNum}`;
 };
 
-console.log(headerEl);
-burgerMenu.addEventListener(`click`, function () {
-  console.log(`worked`);
+const openRules = function () {
   document.querySelector(`.overlay`).classList.remove(`hidden`);
   document.querySelector(`.modal-window`).classList.remove(`hidden`);
   btnCloseModal.classList.remove(`hidden`);
-});
+};
+
+console.log(headerEl);
+burgerMenu.addEventListener(`click`, openRules);
+btnRules.addEventListener(`click`, openRules);
 
 btnCloseModal.addEventListener(`click`, function () {
   document.querySelector(`.overlay`).classList.add(`hidden`);
