@@ -1,0 +1,98 @@
+@media (max-width: 57em) {
+  .modal-window {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .modal-title {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (max-width: 53.75em) {
+  .input-label {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 43.5em) {
+  .input-label {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 35.2em) {
+  .page-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 28.875em) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .slider:before {
+    height: 1.6rem;
+    width: 1.6rem;
+
+    left: 0.4rem;
+    bottom: 0.2rem;
+  }
+
+  .switch {
+    width: 4rem;
+    height: 2rem;
+  }
+
+  .input-toggle:checked + .slider:before {
+    transform: translateX(1.7rem);
+  }
+  .timer {
+    font-size: 9.6rem;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+
+  .modal-window {
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 26.5em) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .random-letters {
+    font-size: 4.4rem;
+  }
+
+  .input-word {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 25em) {
+  .score-container {
+    margin-top: 2rem;
+  }
+
+  .curr-score,
+  .high-score,
+  .round-num {
+    font-size: 1.8rem;
+  }
+
+  .timer {
+    font-size: 7.6rem;
+  }
+}
+
+@media (max-width: 21.1em) {
+  .random-letters {
+    font-size: 3.6rem;
+  }
+}

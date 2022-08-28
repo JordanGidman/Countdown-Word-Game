@@ -11,20 +11,44 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
     <script defer src="script.js"></script>
     <title>Count down Game</title>
   </head>
   <body>
     <div class="container dark">
       <header class="header">
+        <div class="burger-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="burger-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
         <div class="page-title-container">
           <h1 class="page-title"><span>Count Down Word Game</span></h1>
+        </div>
+        <div class="color-toggle">
+          <label class="switch">
+            <input type="checkbox" class="input-toggle" />
+            <span class="slider round"></span>
+          </label>
         </div>
       </header>
 
       <div class="score-container">
         <span class="curr-score">Score: 0</span>
-        <span class="high-score">Highscore: 0</span>
+        <span class="high-score"></span>
+        <span class="round-num"></span>
       </div>
 
       <div class="timer-container">
@@ -43,6 +67,27 @@
         <button class="btn btn-start">start</button>
         <button class="btn btn-rules">rules</button>
       </div>
+      <div class="modal-window">
+        <h2 class="modal-title">RULES OF THE GAME</h2>
+        <p class="modal-text">
+          This is a word game inspired by the TV show countdown. The aim is to
+          create the longest word you can from a group of random letters that
+          will be shown on screen. <br /><br />
+          There are 5 rounds per run. Once you click start the timer will begin
+          counting down from 30. Look at the assortment of letters then type in
+          the longest word you can think of. Then type the word into the box and
+          press submit. after 5 rounds of this the score is added up<br /><br />
+          1. The word must be a real word<br /><br />
+          2. The word must be made only with the letters shown on screen
+          <br /><br />
+          3. If time runs out before you click the submit button you get 0
+          points for that round. <br /><br />
+          4. Press start after each submit to start the next round.
+        </p>
+
+        <button class="btn-close-modal">X</button>
+      </div>
+      <div class="overlay"></div>
     </div>
   </body>
 </html>
