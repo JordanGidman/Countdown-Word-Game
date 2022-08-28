@@ -76,9 +76,6 @@ const startTimer = function () {
       clearInterval(timer);
       randomLettersEl.textContent = `**********`;
       nextRound(`+++`);
-
-      // if (roundNum < 5) roundNum++;
-      // else roundNum--; //THIS NEEDS TO BE CHANGED TO GAME OVER FUNCTION
     }
     time--;
   };
@@ -93,6 +90,10 @@ const startTimer = function () {
 
 const options = {
   method: "GET",
+  headers: {
+    "Content-type": `application/json`,
+    Accept: "application/json",
+  },
 };
 
 const checkAnswer = function (word) {
@@ -124,6 +125,10 @@ const resolveAnswer = function (res) {
   scoreEl.textContent = `Score: ${currScore}`;
   scoreHighEl.textContent = `Highscore: ${highScore}`;
   saveScore();
+
+  if (roundNum > 5) {
+    gameOver();
+  }
 };
 
 const nextRound = function (answer) {
@@ -134,8 +139,10 @@ const nextRound = function (answer) {
   randomLettersEl.textContent = `**********`;
   inputWord.setAttribute(`readonly`, true);
 
-  roundNum++;
-  roundNumEl.textContent = `Round: ${roundNum}`;
+  if (roundNum < 6) {
+    roundNum++;
+    roundNumEl.textContent = `Round: ${roundNum}`;
+  }
 };
 
 const checkLetters = function (userInput, rLetters) {
@@ -162,6 +169,7 @@ btnStart.addEventListener(`click`, function () {
   //Allow the user to type
   inputWord.removeAttribute(`readonly`);
   inputLabel.textContent = `Please Enter The longest Word You Can Think of`;
+  inputLabel.style.color = `white`;
 
   currWord = generateWord().join(``);
 
@@ -180,11 +188,7 @@ btnSubmit.addEventListener(`click`, function (e) {
   // checkAnswer(userAnswer);
   clearInterval(timer);
 
-  if (roundNum < 5) {
-    nextRound(userAnswer);
-  } else {
-    gameOver();
-  }
+  nextRound(userAnswer);
 });
 
 const gameOver = function () {
@@ -196,7 +200,7 @@ const gameOver = function () {
   inputWord.value = ``;
   randomLettersEl.textContent = `**********`;
   inputWord.setAttribute(`readonly`, true);
-  roundNum = 0;
+  roundNum = 1;
   roundNumEl.textContent = `Round: ${roundNum}`;
 };
 
