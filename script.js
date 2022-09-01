@@ -49,7 +49,7 @@ roundNumEl.textContent = `Round: ${roundNum}`;
 const generateWord = function () {
   let str = [];
 
-  //we want to have a loop that will run between 5 and 7 times
+  //we want to have a loop that will run between 6 and 7 times
   for (let i = 0; i < Math.trunc(Math.random() * (7 - 6 + 1) + 6); i++) {
     str.push(characters[Math.trunc(Math.random() * 21)]);
   }
@@ -210,7 +210,6 @@ const openRules = function () {
   btnCloseModal.classList.remove(`hidden`);
 };
 
-console.log(headerEl);
 burgerMenu.addEventListener(`click`, openRules);
 btnRules.addEventListener(`click`, openRules);
 
